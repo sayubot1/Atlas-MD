@@ -38,13 +38,13 @@ module.exports = async (Atlas, m, commands, chatUpdate) => {
         : "";
 
     const metadata = m.isGroup ? await Atlas.groupMetadata(from) : {};
-    const pushname = m.pushName || "NO name";
+    const pushname = m.pushName || "QueeN SaYu";
     const participants = m.isGroup ? metadata.participants : [sender];
     const quoted = m.quoted ? m.quoted : m;
     const groupAdmin = m.isGroup
       ? participants.filter((v) => v.admin !== null).map((v) => v.id)
       : [];
-    const botNumber = await Atlas.decodeJid(Atlas.user.id);
+    const botNumber = await QueeN SaYu.decodeJid(QueeN SaYu.user.id);
     const isBotAdmin = m.isGroup ? groupAdmin.includes(botNumber) : false;
     const isCreator = [botNumber, ...global.owner]
       .map((v) => v.replace(/[^0-9]/g, "") + "@s.whatsapp.net")
